@@ -43,7 +43,13 @@ The Medx App is a web-based application designed to facilitate communication bet
    git clone https://github.com/ify-zi/Medx.git
    cd MedX
 
-2. **Start the Server:**
+2. **Initialise database:**
+    ```bash
+    flask db init
+    flask db migrate -m "Initial commit"
+    flask db upgrade
 
-```bash
+3. **Start the Server:**
+
+    ```bash
    python -m run
