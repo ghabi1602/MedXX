@@ -42,3 +42,8 @@ The Medx App is a web-based application designed to facilitate communication bet
    ```bash
    git clone https://github.com/ify-zi/Medx.git
    cd MedX
+
+2. **Start the Server:**
+
+```bash
+   python -m run
