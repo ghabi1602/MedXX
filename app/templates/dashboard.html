@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content%}
+<body>
+    <section class="dash">
+    <h1>Welcome, {{ user.email }}</h1>
+
+    {% if user.is_doctor %}
+        <h2>Doctor Dashboard</h2>
+        <ul>
+            {% for patient in patients %}
+                
+                    <li>{{ patient.username }}: - <a href="{{ url_for('chat.start_chat', recipient_id=patient.id) }}">Chat</a></li>
+                
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h2>Patient Dashboard</h2>
+        <ul>
+            {% for doctor in doctors  %}
+                
+                    <li>{{ doctor.username }}: {{ doctor.specialty }}- <a href="{{ url_for('chat.start_chat', recipient_id=doctor.id) }}">Chat</a></li>
+                
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <p> {{ get_flashed_messages()}} </p>
+    </section>
+    
+</body>
+{% endblock %}

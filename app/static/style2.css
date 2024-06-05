@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.amine{
+    margin-left: 3%;
+    float: left;
+    color: #cbb3da;
+    margin-top: 10%;
+}
+.amine h1{
+    color: rgb(52, 211, 203);
+}
+.amine p{
+    color: #f3f3f3;
+}
+.header{
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    z-index: 100;
+    padding: 0 30px;
+}
+.nav{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+.nav,
+.nav_items{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+a {
+    text-decoration: none;
+    justify-content: space-between;
+    margin: 15px;
+}
+.nav_item {
+    column-gap: 25px;
+    list-style: none;
+    
+
+}
+.nav_link:hover{
+    color: rgb(233, 233, 85);
+}
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    
+    background-size: cover;
+    background-position: center;
+}
+.home::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-out;
+}
+.home.show::before{
+    opacity: 1;
+    pointer-events: auto;
+}
+.nav_link,
+.button{
+    color: white;
+}
+.button{
+    padding: 6px 24px;
+    border: 3px solid white;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.button:active{
+    transform: scale(0.98);
+}
+.from_container{
+    position: absolute;
+    max-width: 320px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 101;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease-out;
+}
+.home.show .from_container{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.from_container .active .signup_form{
+    display: block;
+
+}
+.form_close{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: rgb(0, 0, 5);
+    font-size: 22px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.from_container h2{
+    font-size: 22px;
+    color: black;
+    text-align: center;
+}
+.input_box{
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+}
+.input_box input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 1.5px solid rgb(0, 0, 0);
+    outline: none;
+    padding: 0 30px;
+    color: rgb(1, 1, 22);
+    transition: all 0.2s ease;
+}
+.input_box input:focus{
+    border-color: blueviolet;
+
+}
+.input_box i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.input_box i.email,
+.input_box i.password{
+    left: 0;
+    color: rgb(0, 0, 0);
+}
+.input_box i.pw_hide{
+    right: 0;
+    font-size: 18px;
+    cursor: pointer;
+}
+.input_box input:focus ~ i.email,
+.input_box input:focus ~ i.password{
+    color: blueviolet;
+}
+.option_field{
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.checkbox{
+    display: flex;
+    white-space: nowrap;
+    font-size: 12px;
+    column-gap: 8px;
+    
+}
+.from_container a{
+    color: blueviolet;
+    font-size: 12px;
+}
+.from_container a:hover{
+    text-decoration: underline;
+}
+.checkbox label{
+    color: black;
+    font-size: 12px;
+    user-select: none;
+    cursor: pointer;
+}
+.checkbox input{
+    accent-color: rgb(102, 150, 196);
+}
+.from_container .button{
+    background: rgb(74, 74, 206);
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+.login_signup{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+}
+.sgn{
+    margin: 10%;
+    padding: 7px ;
+    font-size: x-large;
+    text-align: center;
+    margin-top: 25%;
+    margin-left: 20%;
+    border: 3px solid white;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    color: aliceblue;
+}
+.img{
+    height: 20%;
+    width: 20%;
+    margin-top: 20%;
+    margin-left: 2%;
+    margin-right: 10%;
+}
+.container{
+    padding: 10%;
+    size: 40%;
+    width: 50%;
+    text-align: center;
+}
+legend{
+    text-decoration: wavy;
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    margin: 10% ;
+    text-align: left;
+}
+.btn{
+    width: 100%;
+    margin-top: 10%;
+}

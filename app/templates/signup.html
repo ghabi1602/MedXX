@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedX</title>
+    <link rel="icon" href="static/images/asmaa.png">
+    <link rel="stylesheet" href="static/style2.css">
+    <link rel="stylesheet" href="index.html">
+    <link rel="icon" href="static/images/asmaa.png">
+    <link rel="stylesheet" href="formdoc.html">
+    <link rel="stylesheet" href="formpation.html">
+</head>
+<body style="background-color: rgb(23, 75, 75);">
+    <header class="header">
+        <nav class="nav">
+            <img src="static/images/md.png" alt="logo" height="100%" width="4%">
+            <ul class="nav_items">
+                <li class="nav_item">
+                    <a href="index2.html" class="nav_link">Home</a>
+                    <a href="#" class="nav_link">About</a>
+                    <a href="#" class="nav_link">Doctors</a>
+                    <a href="#" class="nav_link">Review</a>
+                </li>
+            </ul>
+            <div></div>
+        </nav>
+    </header>
+    <div>
+        <p> {{ get_flashed_messages() }}</p>
+        <form action="{{ url_for('auth.register') }}" method="POST">
+            <label for="fullname">FullName: </label>
+            <input type="text" name="fullname" required>
+            <br>
+            <label for="username">Username: </label>
+            <input type="text" name="username" required>
+            <br>
+            <label for="email">Email: </label>
+            <input type="email" name="email" required>
+            <br>
+            <label for="password">Password: </label>
+            <input type="password" name="password" required>
+            <br>
+            <label for="dob">Date of Birth: </label>
+            <input type="date" name="dob" required>
+            <br>
+            <label for="blood_group">Blood Group: </label>
+            <input type="text" name="blood_group">
+            <br>
+            <label for="genotype">Genotype: </label>
+            <input type="text" name="genotype">
+            <br>
+            <label>Weight(kg): </label>
+            <input type="number" name="weight">
+            <br>
+            <label>Location: </label>
+            <select name="location">
+                <option value="United States of America"> United States</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Tunisia">Tunisia</option>
+                <option value="South Africa">South Africa</option>
+            </select>
+            <br>
+            <label for="allergies">Allergies: </label>
+            <input type="text" name="allergies">
+            <br>
+            <label for="is_doctor">Register as Doctor:</label>
+            <input type="checkbox" name="is_doctor">
+            <br>
+            <div id="doctor-fields" style="display: none;">
+                <label for="specialty">Specialty: </label>
+                <input type="text" name="specialty">
+                <br>
+                <label for="bio">Bio: </label>
+                <textarea name="bio" placeholder="Bio"></textarea>
+                <br>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script>
+        document.querySelector('input[name="is_doctor"]').addEventListener('change', function() {
+            document.getElementById('doctor-fields').style.display = this.checked ? 'block' : 'none';
+        });
+    </script>
+    
+    
+</body>
+</html>

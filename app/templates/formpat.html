@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='images/asmaa.png') }}">
+    <title>MedX</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+    <link rel="stylesheet" href="signup.html">
+    <link rel="stylesheet" href="index2.html">
+</head>
+<body style="background-image: url(static/images/doc2.webp);">
+    <header class="header">
+        <nav class="nav">
+            <img src="{{ url_for('static', filename='images/md.png') }}" alt="logo" height="100%" width="4%">
+            <ul class="nav_items">
+                <li class="nav_item">
+                    <a href="index2.html" class="nav_link">Home</a>
+                    <a href="#" class="nav_link">About</a>
+                    <a href="#" class="nav_link">Doctors</a>
+                    <a href="#" class="nav_link">Review</a>
+                </li>
+            </ul>
+            <div></div>
+        </nav>
+    </header>
+    <section class="container">
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <form action="{{ url_for('app_views.signup_user') }}" method="POST">
+                <fieldset>
+                    <legend>Your Cordinate</legend>
+                    <table>
+                        <tr>
+                            <td><label for="fullname">First Name : </label></td>
+                            <td><input type="text" name="fullname" placeholder="Your First Name" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="username">Username :</label></td>
+                            <td><input type="text" name="username" placeholder="Your Last Name" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Mail :</label></td>
+                            <td><input type="email" name="email" placeholder="Your mail" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Create password :</label></td>
+                            <td><input type="password" name="password" placeholder="password"></td>
+                        </tr>
+                        <!--<tr>
+                            <td><label for="">Confirm password :</label></td>
+                            <td><input type="password" placeholder="Confirm password" required></td>
+                        </tr>-->
+                    </table>
+                    
+                </fieldset> <br> <br>
+                <fieldset>
+                    <legend>About You</legend>
+                    <table>
+                        <tr>
+                            <td> <label for="dob">Date of birth:</label></td>
+                            <td><input type="date" name="dob"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="allergies">Blood group :</label></td>
+                            <td><input type="text" name="blood_group" placeholder="Your Blood group"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="allergies">Your allergies :</label></td>
+                            <td><input type="text" name="allergies"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Weight :</label></td>
+                            <td><input type="number" name="weight"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <button class="btn">Signup Now</button></a>
+            </form>
+        </div>
+       
+    </section>
+    
+    
+</body>
+</html>
