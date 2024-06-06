@@ -1,4 +1,5 @@
 Flask
+Flask-socketio
 Flask-SQLAlchemy
 Flask-Login
 Werkzeug
