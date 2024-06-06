@@ -230,12 +230,14 @@ a {
     margin-left: 2%;
     margin-right: 10%;
 }
+
 .container{
     padding: 10%;
     size: 40%;
     width: 50%;
     text-align: center;
 }
+
 legend{
     text-decoration: wavy;
     color: rgb(0, 0, 0);
@@ -245,7 +247,73 @@ legend{
     margin: 10% ;
     text-align: left;
 }
+
 .btn{
     width: 100%;
     margin-top: 10%;
+}
+
+.cover{
+    background-image: url(images/med2.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container1 {
+    display: grid;
+    grid-template-columns: 14rem auto 14rem;
+    gap: 1.8rem;
+    width: 96%;
+    margin: 0 auto;
+}
+
+.container1 div ul  li {
+    list-style: none;
+}
+
+.container1 h2{
+    text-align: center;
+    text-decoration: wavy;
+}
+
+.dashboard{
+    height: 100vh;
+    top: 2rem;
+}
+
+.dashboard a{
+    transition: all .1s ease-in;
+    color: rgb(28, 28, 122);
+    align-items: first baseline;
+    height: 3.2rem;
+}
+
+.dashboard a span{
+    font-size: 1.8rem;
+    transition: all .1s ease-in;
+}
+
+.dashboard li:last-child{
+    position: absolute;
+    bottom: 1rem;
+    width: 20%;
+}
+
+
+.dash ul li {
+    margin-top: 10%;
+}
+
+.profile-photo{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 90%;
+}
+
+.departement a i{
+    width: 100%;
 }

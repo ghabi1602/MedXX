@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "dashdoc.html" %}
 {% block content%}
 <body>
     <section class="dash">
@@ -8,18 +8,18 @@
         <h2>Doctor Dashboard</h2>
         <ul>
             {% for patient in patients %}
-                
+                {% if patient.is_online %}
                     <li>{{ patient.username }}: - <a href="{{ url_for('chat.start_chat', recipient_id=patient.id) }}">Chat</a></li>
-                
+                {% endif %}
             {% endfor %}
         </ul>
     {% else %}
         <h2>Patient Dashboard</h2>
         <ul>
             {% for doctor in doctors  %}
-                
-                    <li>{{ doctor.username }}: {{ doctor.specialty }}- <a href="{{ url_for('chat.start_chat', recipient_id=doctor.id) }}">Chat</a></li>
-                
+                    {% if doctor.is_online %}
+                    <li>{{ doctor.username }}: {{ doctor.specialty }} - <a href="{{ url_for('chat.start_chat', recipient_id=doctor.id) }}">Chat</a></li>
+                    {% endif %}
             {% endfor %}
         </ul>
     {% endif %}

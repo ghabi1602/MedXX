@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedX</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/asmaa.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+    <script src="https://kit.fontawesome.com/50aca5c1f9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="container1">
+        <div class="col-lg-4 col-md-4 col-sm-6  dash ">
+            <div><img src="{{ url_for('static', filename='images/md.png') }}" alt="logo" height="30%" width="30%"></div>
+            <ul class="dashboard">
+                <li><a href="#"><i class="fa-regular fa-calendar-check"></i>  Appointment</a></li>
+                <li><li><a href=""><i class="fa-solid fa-credit-card"></i>  Payment</li></a></li>
+                <li><a href=""><i class="fa-solid fa-gears"></i>  Settings</li></a>
+                <li><a href="{{ url_for('routes.dashboard') }}"><i class="fa-regular fa-comments"></i> Chat</a></li>
+                <li><a href="{{url_for('auth.logout')}}"><i class="fa-solid fa-arrow-right-from-bracket"></i>   Log out</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 " style="background-image: url('{{ url_for('static', filename='images/med2.png') }}'); background-size : cover;" >{% block content%} {% endblock %} </div>
+        <div class="departement">
+            <img src="{{ url_for('static', filename='images/pation.png')}}" alt="pation" class="profile-photo"> <br> <br>
+            <h2>DEPARTMENTS</h2>
+            <p>Allergy & Asthma</p>
+            <p>Internal Medicine</p>
+            <p>Dermatology</p>
+            <p>Diabetics</p>
+            <p>Cardiology</p>
+            <p>Neurology</p>
+            <p>Genetics and Genomics</p><br>
+            <h2>Contact Us</h2>
+            <a href="guesmihadil0@gmail.com"><i class="fa-solid fa-at"></i>guesmihadil0@gmail.com</a><br> <br>
+            <a href="+21655734856"><i class="fa-brands fa-whatsapp"></i>+21655734856</a>
+        </div>
+        
+
+        
+
+    </section>
+</body>
+</html>

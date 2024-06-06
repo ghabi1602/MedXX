@@ -6,7 +6,7 @@ body{
 	font-family:Arial;
 }
 #container{
-	width:100%;
+	width: 750px;
 	height:800px;
 	background:#eff3f7;
 	margin:0 auto;
@@ -15,7 +15,7 @@ body{
 	overflow:hidden;
 }
 aside{
-	width: 350px;
+	width: 260px;
 	height:800px;
 	background-color:#3b3e49;
 	display:inline-block;
@@ -148,6 +148,7 @@ main header h3{
 #chat li{
 	padding:10px 30px;
 }
+
 #chat h2,#chat h3{
 	display:inline-block;
 	font-size:13px;
@@ -173,6 +174,7 @@ main header h3{
 }
 #chat .you .message{
 	background-color:#58b666;
+	
 }
 #chat .me .message{
 	background-color:#6fbced;
@@ -181,11 +183,10 @@ main header h3{
 	width: 0;
 	height: 0;
 	border-style: solid;
-	border-width: 0 10px 10px 10px;
+	border-width: 0px 10px 10px 10px;
 }
 #chat .you .triangle{
 		border-color: transparent transparent #58b666 transparent;
-		margin-left:15px;
 }
 #chat .me .triangle{
 		border-color: transparent transparent #6fbced transparent;

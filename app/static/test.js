@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             ${data.content}
         </div>
     `;
-    console.log("got to this point");
+    
         chat.appendChild(messageElement);
         let chatWindow = document.getElementById('chat');
         chatWindow.scrollTop = chatWindow.scrollHeight;
