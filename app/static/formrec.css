@@ -1,0 +1,37 @@
+.form_rec{
+    margin-left: 12.5%;
+    margin-top: 50px;
+    margin-right:12.5%;
+    border: 2px;
+}
+
+input[type=text], textarea{
+    padding: 10px 30px;
+    margin-top: 10px;
+    resize:none;
+	border:none;
+	width:80%;
+	height:80px;
+    color: black; ;
+	border-radius:7px;
+	padding:20px;
+	font-size:13px;
+	margin-bottom:13px;
+}
+
+input[type=text]:hover, textarea:hover{
+    border-color: teal;
+    border: 2px solid teal;
+    text-shadow: 10px;
+}
+
+.rec_button {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.rec_button:hover{
+    color: black;
+    background-color: teal;
+}
+

@@ -7,6 +7,11 @@ html, body {
     height: 100%;
     
     }
+
+    body .header{
+        justify-content: right;
+    }
+
     body, div, h1, form, input, p { 
     padding: 0;
     margin: 0;
@@ -31,7 +36,7 @@ html, body {
     }
     .main-block {
     width: 500px; 
-    min-height: 70%; 
+    min-height: 50%; 
     padding: 10px 0;
     margin: auto;
     border-radius: 5px; 
@@ -43,8 +48,7 @@ html, body {
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 0px;
-    margin-bottom: 0px;
-    border-top: 30px;
+    margin-bottom: 1px;
     }
     .account-type, .gender {
     margin: 15px 0;

@@ -40,12 +40,14 @@ def register():
         username = request.form.get('username')
         email = request.form.get('email')
         password = request.form.get('password')
+        gender = request.form.get('gender')
         is_doctor = request.form.get('is_doctor') == 'on'
         dob = request.form.get('dob')
         blood_group = request.form.get('blood_group')
         genotype = request.form.get('allergies')
         weight = request.form.get('weight')
         location = request.form.get('location')
+        allergies = request.form.get('allergies')
         specialty = request.form.get('specialty')
         bio = request.form.get('bio')
         hashed_password = generate_password_hash(password, method='pbkdf2:sha256')
@@ -58,6 +60,7 @@ def register():
                         username=username,
                         email=email,
                         password=hashed_password,
+                        gender=gender,
                         is_doctor=is_doctor,
                         dob=dob,
                         blood_group=blood_group,
@@ -70,10 +73,12 @@ def register():
                                                     username=username,
                                                     email=email,
                                                     password=hashed_password,
+                                                    gender=gender,
                                                     is_doctor=is_doctor,
                                                     dob=dob,
                                                     blood_group=blood_group,
                                                     genotype=genotype,
+                                                    allergies=allergies,
                                                     weight=weight,
                                                     location=location)
         db.session.add(new_user)

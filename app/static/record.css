@@ -1,0 +1,38 @@
+.search{
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.search input{
+    border-radius: 5px;
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+
+.search button{
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.search button:hover{
+    color: black;
+    background-color: teal;
+}
+
+.main-container{
+    justify-content: center;
+}
+
+.new_record{
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 25px;
+}
+
+.new_record:hover{
+    color: black;
+    background-color: teal;
+}

@@ -8,6 +8,7 @@ class User(UserMixin, BaseModel):
     username = db.Column(db.String(150), unique=True, nullable=False)
     email = db.Column(db.String(150), unique=True, nullable=False, index=True)
     password = db.Column(db.String(150), nullable=False)
+    gender = db.Column(db.String(26), nullable=False)
     is_doctor = db.Column(db.Boolean, default=False)
     is_online = db.Column(db.Boolean, default=False)
     blood_group = db.Column(db.String(60), nullable=True)

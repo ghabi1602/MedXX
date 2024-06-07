@@ -1,0 +1,23 @@
+{% extends "record.html" %}
+{% block new_content %}
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='formrec.css') }}"
+</head>
+<form class="form_rec" action="{{ url_for('routes.add_record') }}" method="post">
+    
+    <input type="text" name="user_email" placeholder="Patient Email" required>
+    <br>
+    <textarea type="text" name="diagnosis" placeholder="Diagnosis" required></textarea>
+    <br>
+    
+    <textarea type="text" name="medical history" placeholder="Medical History"></textarea>
+    <br>
+    
+    <textarea type="text" name="allergies" placeholder="Allergies"></textarea>
+    <br>
+    
+    <textarea type="text" name="medication" placeholder="Medication"></textarea>
+    <br>
+    <button class="rec_button" type="submit">Submit</button>
+</form>
+{% endblock %}

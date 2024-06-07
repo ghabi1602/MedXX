@@ -22,7 +22,6 @@
                     <a href="#" class="nav_link">Review</a>
                 </li>
             </ul>
-            <div></div>
         </nav>
     </header>
     <div class="main-block">
@@ -53,6 +52,13 @@
             <label id="icon" for="dob"><i class="fas fa-calendar-alt"></i></label>
             <input type="date" name="dob" required>
             <br>
+            <label id="icon" for="gender"><i class="fas fa-user"></i></label>
+            <select name="gender">
+                <option selected disabled>Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</optioon>
+            </select>
+            <br>
             <label id="icon" for="blood_group"><i class="fas fa-plus"></i></label>
             <input type="text" name="blood_group" placeholder="Blood Group">
             <br>
@@ -64,6 +70,7 @@
             <br>
             <label id="icon" for="location"><i class="fas fa-map-marker-alt"></i></label>
             <select name="location" placeholder="Location">
+                <option selected disabled>Location</option>
                 <option value="Egypt"> Egypt</option>
                 <option value="Kenya">Kenya</option>
                 <option value="Ethopia">Ethopia</option>
@@ -72,7 +79,7 @@
                 <option value="South Africa">South Africa</option>
             </select>
             <br>
-            <label id="icon" for="allergies"><i class="fas fa-head-side-cough"></i></label>
+            <label id="icon" for="allergies"><i class="fas fa-disease"></i></label>
             <input type="text" name="allergies" placeholder="Allergies">
             <br>
             <label for="is_doctor">Register as Doctor:</label>
