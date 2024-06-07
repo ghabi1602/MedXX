@@ -6,6 +6,9 @@
     <title>MedX</title>
     <link rel="icon" href="{{ url_for('static', filename='images/asmaa.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 </head>
 <body style="background-color: rgb(25, 78, 80);">
     <header class="header">
@@ -22,7 +25,8 @@
             <div></div>
         </nav>
     </header>
-    <div class="reg">
+    <div class="main-block">
+        <h1>Registration</h1>
         {% with msg = get_flashed_messages(with_categories=True) %}
             {% if msg %}
                 {% for category, message in msg %}
@@ -34,32 +38,32 @@
             {% endif %}
         {% endwith %}
         <form action="{{ url_for('auth.register') }}" method="POST">
-            <label for="fullname">FullName: </label>
-            <input type="text" name="fullname" required>
+            <label id="icon" for="fullname"><i class="fas fa-user-circle"></i></label>
+            <input type="text" name="fullname" placeholder="Fullname" required>
             <br>
-            <label for="username">Username: </label>
-            <input type="text" name="username" required>
+            <label id="icon" for="username"><i class="fas fa-user"></i> </label>
+            <input type="text" name="username" placeholder="Username" required>
             <br>
-            <label for="email">Email: </label>
-            <input type="email" name="email" required>
+            <label id="icon" for="email"><i class="fas fa-envelope"></i> </label>
+            <input type="email" id="name" name="email" placeholder="Email" required>
             <br>
-            <label for="password">Password: </label>
+            <label id="icon" for="password"><i class="fas fa-unlock-alt"></i></label>
             <input type="password" name="password" required>
             <br>
-            <label for="dob">Date of Birth: </label>
+            <label id="icon" for="dob"><i class="fas fa-calendar-alt"></i></label>
             <input type="date" name="dob" required>
             <br>
-            <label for="blood_group">Blood Group: </label>
-            <input type="text" name="blood_group">
+            <label id="icon" for="blood_group"><i class="fas fa-plus"></i></label>
+            <input type="text" name="blood_group" placeholder="Blood Group">
             <br>
-            <label for="genotype">Genotype: </label>
-            <input type="text" name="genotype">
+            <label id="icon" for="genotype"><i class="fas fa-dna"></i></label>
+            <input type="text" name="genotype" placeholder="Genotype">
             <br>
-            <label>Weight(kg): </label>
-            <input type="number" name="weight">
+            <label id="icon" for="weight"><i class="fas fa-weight"></i></label>
+            <input type="number" name="weight" placeholder="Weight">
             <br>
-            <label>Location: </label>
-            <select name="location">
+            <label id="icon" for="location"><i class="fas fa-map-marker-alt"></i></label>
+            <select name="location" placeholder="Location">
                 <option value="Egypt"> Egypt</option>
                 <option value="Kenya">Kenya</option>
                 <option value="Ethopia">Ethopia</option>
@@ -68,24 +72,24 @@
                 <option value="South Africa">South Africa</option>
             </select>
             <br>
-            <label for="allergies">Allergies: </label>
-            <input type="text" name="allergies">
+            <label id="icon" for="allergies"><i class="fas fa-head-side-cough"></i></label>
+            <input type="text" name="allergies" placeholder="Allergies">
             <br>
             <label for="is_doctor">Register as Doctor:</label>
             <input type="checkbox" name="is_doctor">
             <br>
             <div id="doctor-fields" style="display: none;">
-                <label for="specialty">Specialty: </label>
-                <input type="text" name="specialty">
+                <label id="icon" for="specialty"><i class="fas fa-stethoscope"></i></label>
+                <input type="text" name="specialty" placeholder="Specialty">
                 <br>
-                <label for="bio">Bio: </label>
+                <label id="icon" for="bio"><i class="fas fa-hospital"></i></label>
                 <textarea name="bio" placeholder="Bio"></textarea>
                 <br>
             </div>
             <button type="submit">Register</button>
         </form>
     </div>
-
+    
     <script>
         document.querySelector('input[name="is_doctor"]').addEventListener('change', function() {
             document.getElementById('doctor-fields').style.display = this.checked ? 'block' : 'none';
