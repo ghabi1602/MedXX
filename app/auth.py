@@ -17,8 +17,7 @@ def login():
         log_user = User.query.filter_by(email=email).first()
         if log_user and check_password_hash(log_user.password, password):
             login_user(log_user)
-            
-            print("logged in successfully")
+            flash('Login sucessful', 'sucess')
             if log_user.is_doctor:
                 log_user.is_online = True
                 db.session.commit()
@@ -28,7 +27,7 @@ def login():
                 db.session.commit()
                 return redirect(url_for('routes.dashpat'))
         else:
-            flash('Login failed. Check your email and password.')
+            flash('Login failed. Check your email and password.', 'error')
             print("Login failed")
     return render_template('index2.html')
 

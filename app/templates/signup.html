@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedX</title>
-    <link rel="icon" href="static/images/asmaa.png">
-    <link rel="stylesheet" href="static/style2.css">
-    <link rel="stylesheet" href="index.html">
-    <link rel="icon" href="static/images/asmaa.png">
-    <link rel="stylesheet" href="formdoc.html">
-    <link rel="stylesheet" href="formpation.html">
+    <link rel="icon" href="{{ url_for('static', filename='images/asmaa.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
 </head>
-<body style="background-color: rgb(23, 75, 75);">
+<body style="background-color: rgb(25, 78, 80);">
     <header class="header">
         <nav class="nav">
-            <img src="static/images/md.png" alt="logo" height="100%" width="4%">
+            <img src="{{ url_for('static', filename='images/md.png') }}" alt="logo" height="100%" width="4%">
             <ul class="nav_items">
                 <li class="nav_item">
                     <a href="index2.html" class="nav_link">Home</a>
@@ -26,8 +22,17 @@
             <div></div>
         </nav>
     </header>
-    <div>
-        <p> {{ get_flashed_messages() }}</p>
+    <div class="reg">
+        {% with msg = get_flashed_messages(with_categories=True) %}
+            {% if msg %}
+                {% for category, message in msg %}
+                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                    <strong>{{ message }}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
         <form action="{{ url_for('auth.register') }}" method="POST">
             <label for="fullname">FullName: </label>
             <input type="text" name="fullname" required>
@@ -55,7 +60,9 @@
             <br>
             <label>Location: </label>
             <select name="location">
-                <option value="United States of America"> United States</option>
+                <option value="Egypt"> Egypt</option>
+                <option value="Kenya">Kenya</option>
+                <option value="Ethopia">Ethopia</option>
                 <option value="Nigeria">Nigeria</option>
                 <option value="Tunisia">Tunisia</option>
                 <option value="South Africa">South Africa</option>
