@@ -7,12 +7,9 @@
     <title>MedX</title>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='alert.css') }}">
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
-    <!--<link rel="stylesheet" href="./signup.html">
-    <link rel="stylesheet" href="./formdoc.html">
-    <link rel="stylesheet" href="./formpat.html">
-    <link rel="stylesheet" href="./doctors.html">-->
 </head>
 <body>
     <header class="header">
@@ -20,29 +17,41 @@
             <img src="{{ url_for('static', filename='images/md.png') }}" alt="logo" height="100%" width="4%">
             <ul class="nav_items">
                 <li class="nav_item">
-                    <a href="{{url_for('routes.home')}}" class="nav_link">Home</a>
+                    <a href="{{ url_for('routes.home')}}" class="nav_link">Home</a>
                     <a href="#" class="nav_link">About</a>
                     <a href="doctors.html" class="nav_link">Doctors</a>
                     <a href="#" class="nav_link">Review</a>
                 </li>
             </ul>
+            <a class="button" href="{{ url_for('auth.register') }}"> Signup</a> 
             <button class="button" id="form-open">Login</button>
         </nav>
+        {% with msg = get_flashed_messages(with_categories=True) %}
+            {% if msg %}
+            {% for category, message in msg %}
+              <div class="{{ category }}">
+              <span class="close">&times;</span>  
+               {{ message }}
+          </div>
+          {% endfor %}
+          {% endif %}
+          {% endwith %}
     </header>
     <section class="home" style="background-image: url('{{ url_for('static', filename='images/amin.jpg') }}');">
+        
         <div class="from_container">
             <i class="uil uil-times form_close"></i>
-            <div class="form login_form">
-                {% with msg = get_flashed_messages(with_categories=True) %}
+            <div class="form login_form"></div>
+            {% with msg = get_flashed_messages(with_categories=True) %}
                 {% if msg %}
-                    {% for category, message in msg %}
-                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
-                        <strong>{{ message }}</strong>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}
+                {% for category, message in msg %}
+                  <div class="{{ category }}">
+                  <span class="close">&times;</span>  
+                   {{ message }}
+              </div>
+              {% endfor %}
+              {% endif %}
+              {% endwith %}
                 <form action="{{ url_for('auth.login') }}" method="post">
                     <h2>Login</h2>
                     <div class="input_box">
@@ -66,7 +75,7 @@
                     <div class="login_signup">Don't have an account? <a href="{{ url_for('auth.register') }}" id="Signup">Signup</a></div>
                 </form>  
             </div>
-        </div>
+            
         <div class="amine">
             <h1>Stay Safe Stay Healthy</h1><br>
             <p>Your health is one of the most important things in your life.<br>
@@ -78,6 +87,15 @@
     </section>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>var close = document.getElementsByClassName("close");
+        var i;
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function(){
+                var div = this.parentElement;
+                div.style.opacity = "0";
+                setTimeout(function(){ div.style.display = "none"; }, 600);
+            }
+        }</script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 

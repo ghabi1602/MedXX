@@ -86,6 +86,10 @@ a {
     border-radius: 6px;
     cursor: pointer;
 }
+.button:hover{
+    background-color: white;
+    color: teal;
+}
 .button:active{
     transform: scale(0.98);
 }

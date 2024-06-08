@@ -7,23 +7,11 @@
     {% if user.is_doctor %}
         <h2>Doctor Dashboard</h2>
         <ul>
-            {% for patient in patients %}
-                {% if patient.is_online %}
-                    <li>{{ patient.username }}: - <a href="{{ url_for('chat.start_chat', recipient_id=patient.id) }}">Chat</a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-    {% else %}
-        <h2>Patient Dashboard</h2>
-        <ul>
-            {% for doctor in doctors  %}
-                    {% if doctor.is_online %}
-                    <li>{{ doctor.username }}: {{ doctor.specialty }} - <a href="{{ url_for('chat.start_chat', recipient_id=doctor.id) }}">Chat</a></li>
-                    {% endif %}
+            {% for patient in patients %}  
+                    <li>{{ patient.username }} - {% if patient.is_online %}  Active {% else %}  Offline {% endif %} <a href="{{ url_for('chat.start_chat', recipient_id=patient.id) }}">Chat</a></li>
             {% endfor %}
         </ul>
     {% endif %}
     </section>
-    
 </body>
 {% endblock %}

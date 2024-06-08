@@ -76,14 +76,15 @@
           {% endwith %}
         {% if user_rec %}
         <div >
-            <table >
+            <table class="table-container" >
                 <thead>
                   <tr>
-                    <th>ID</th>
-                    <th>Diagnosis</th>
-                    <th>Medication</th>
-                    <th>Allergies</th>
-                    <th>Doctor</th>
+                    <th><h1>Patient</h1></th>
+                    <th><h1>Diagnosis</h1></th>
+                    <th><h1>Medication</h1></th>
+                    <th><h1>Allergies</h1></th>
+                    <th><h1>Doctor</h1></th>
+                    <th><h1>Timestamp</h1></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -99,9 +100,7 @@
                                                 {% endif %}
                                                 {% endfor %}
                                               </td>
-                    <td data-title="Link">
-                      <a href="#" target="_blank">edit</a>
-                    </td>
+                    <td data-title="Timestamp">{{ rec.created_at.isoformat()}}</td>
                   </tr>
                   {% endfor %}
                 </tbody>

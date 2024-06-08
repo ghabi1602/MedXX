@@ -7,6 +7,7 @@
     <link rel="icon" href="{{ url_for('static', filename='images/asmaa.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='alert.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 </head>
@@ -16,7 +17,7 @@
             <img src="{{ url_for('static', filename='images/md.png') }}" alt="logo" height="100%" width="4%">
             <ul class="nav_items">
                 <li class="nav_item">
-                    <a href="index2.html" class="nav_link">Home</a>
+                    <a href="{{ url_for('routes.home')}}" class="nav_link">Home</a>
                     <a href="#" class="nav_link">About</a>
                     <a href="#" class="nav_link">Doctors</a>
                     <a href="#" class="nav_link">Review</a>
@@ -25,17 +26,20 @@
         </nav>
     </header>
     <div class="main-block">
+        <div class="header_container">
         <h1>Registration</h1>
         {% with msg = get_flashed_messages(with_categories=True) %}
-            {% if msg %}
-                {% for category, message in msg %}
-                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
-                    <strong>{{ message }}</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                {% endfor %}
+          {% if msg %}
+          {% for category, message in msg %}
+          <div class="alert"></div>
+            <div class="{{ category }}">
+            <span class="close">&times;</span>  
+             {{ message }}
+        </div>
+            {% endfor %}
             {% endif %}
         {% endwith %}
+        </div>
         <form action="{{ url_for('auth.register') }}" method="POST">
             <label id="icon" for="fullname"><i class="fas fa-user-circle"></i></label>
             <input type="text" name="fullname" placeholder="Fullname" required>
@@ -47,7 +51,7 @@
             <input type="email" id="name" name="email" placeholder="Email" required>
             <br>
             <label id="icon" for="password"><i class="fas fa-unlock-alt"></i></label>
-            <input type="password" name="password" required>
+            <input type="password" name="password" placeholder="Password" required>
             <br>
             <label id="icon" for="dob"><i class="fas fa-calendar-alt"></i></label>
             <input type="date" name="dob" required>
@@ -96,11 +100,20 @@
             <button type="submit">Register</button>
         </form>
     </div>
-    
+    <!--<script src="{{ url_for('static', filename='alert.js' )}}"></script>-->
     <script>
         document.querySelector('input[name="is_doctor"]').addEventListener('change', function() {
             document.getElementById('doctor-fields').style.display = this.checked ? 'block' : 'none';
         });
+        var close = document.getElementsByClassName("close");
+        var i;
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function(){
+                var div = this.parentElement;
+                div.style.opacity = "0";
+                setTimeout(function(){ div.style.display = "none"; }, 600);
+  }
+}
     </script>
     
     

@@ -28,7 +28,8 @@ def login():
                 return redirect(url_for('routes.dashpat'))
         else:
             flash('Login failed. Check your email and password.', 'error')
-            print("Login failed")
+            return render_template('index2.html')
+
     return render_template('index2.html')
 
 
