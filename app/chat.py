@@ -22,15 +22,15 @@ def start_chat():
     recipient_id = request.args.get('recipient_id')
     recipient = User.query.filter_by(id=recipient_id).first()
     if not recipient:
-        flash('User not found.')
+        flash('User not found.', 'error')
         return redirect(url_for('routes.dashboard'))
-    
+        
     patients = Patient.query.all()
     doctors = Doctor.query.all()
     messages= Message.query.filter(
         ((Message.sender_id == current_user.id) & (Message.receiver_id == recipient_id)) |
         ((Message.sender_id == recipient_id) & (Message.receiver_id == current_user.id))
-    ).order_by(Message.created_at).all()
+        ).order_by(Message.created_at).all()
     return render_template('test_chatbox.html', 
                            user=current_user,
                            patients=patients,

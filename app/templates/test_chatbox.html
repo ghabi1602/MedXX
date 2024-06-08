@@ -1,4 +1,8 @@
+{% if current_user.is_doctor %}
 {% extends "dashdoc.html" %}
+{% else %}
+{% extends "dashpat.html" %}
+{% endif %}
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">

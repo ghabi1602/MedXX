@@ -1,0 +1,9 @@
+{% extends "dashpat.html" %}
+{% block list%}
+
+<h2>Choose a doctor to chat with:</h2>
+{%for doctors in doctors %}
+    <li>{{ doctor.username }} - {%if doctor.is_online %} Active {%else%} Offline {% endif %}: <a href="{{ url_for('chat.start_chat', recipient_id=doctor.id) }}">Chat</a></li>
+{% endfor %}
+
+{% endblock %}

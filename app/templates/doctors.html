@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='images/asmaa.png') }}">
+    <title>MedX</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css')}}">
+</head>    
+<body style="background-color: rgb(19, 92, 92);">
+    <header class="header">
+        <nav class="nav">
+            <img src="{{ url_for('static', filename='images/md.png') }}" alt="logo" height="100%" width="4%">
+            <ul class="nav_items">
+                <li class="nav_item">
+                    <a href="{{url_for('routes.home')}}" class="nav_link">Home</a>
+                    <a href="#" class="nav_link">About</a>
+                    <a href="{{url_for('routes.doc')}}" class="nav_link">Doctors</a>
+                    <a href="#" class="nav_link">Review</a>
+                </li>
+            </ul>
+            <div></div>
+        </nav>
+    </header>
+        <div class="col-lg-4 col-md-4 col-sm-4 text-centre">
+            <img src="{{ url_for('static', filename='images/doc1.jpg') }}" alt="doc1" class="img">
+            <img src="{{url_for('static', filename='images/doc2.webp') }}" alt="doc2" class="img" >
+            <img src="{{ url_for('static', filename='images/doc3.jpg') }}" alt="doc3" class="img">
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

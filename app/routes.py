@@ -108,3 +108,12 @@ def add_record():
     db.session.commit()
     return redirect(url_for('routes.records'))
 
+@bp.route('/doctors')
+def doc():
+    return render_template('doctors.html')
+
+@bp.route('/dashboard/doctors')
+@login_required
+def doc_list():
+    doctors = Doctor.query.all()
+    return render_template('doc_list.html', doctors=doctors)

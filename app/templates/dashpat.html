@@ -11,46 +11,18 @@
 <body>
     <section class="container1">
         <div class="col-lg-4 col-md-4 col-sm-6  dash ">
-            <div><img src="{{ url_for('static', filename='images/md.png') }}" alt="logo" height="30%" width="30%">{% block content %} {% endblock %}</div>
+            <div><img src="{{ url_for('static', filename='images/md.png') }}" alt="logo" height="30%" width="30%"></div>
             <ul class="dashboard">
                 <li><a href="#"><i class="fa-regular fa-calendar-check"></i>  Appointment</a></li>
-                <li></li>
-                <li><a href="{{ url_for('routes.dashboard')}}"><i class="fa-solid fa-user-doctor"></i>  Doctors</a></li>
+                <li><a href="{{ url_for('routes.doc_list')}}"><i class="fa-solid fa-user-doctor"></i>  Doctors</a></li>
                 <li><a href=""><i class="fa-solid fa-credit-card"></i>  Payment</li></a>
                 <li><a href=""><i class="fa-solid fa-gears"></i>  Setting</li></a>
-                <li><a href="{{ url_for('routes.dashboard')}}"><i class="fa-regular fa-comments"></i> Chat</a></li>
+                <li><a href="{{ url_for('routes.doc_list')}}"><i class="fa-regular fa-comments"></i> Chat</a></li>
                 <li><a href="{{ url_for('auth.logout')}}"><i class="fa-solid fa-arrow-right-from-bracket"></i>   Log out</a></li>
             </ul>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 cover" >
-            <h2>Why Medx?</h2> <br>
-            <ul>
-                <h4>
-                    <li>Highly Qualified Doctors Available</li>
-                    <li>Smart Lab Facilities</li>
-                    <li>Talented Technicians</li>
-                    <li>Hi-Tech Instruments</li>
-                    <li>Best Care and Service</li>
-                    <li>Easy EMI System</li>
-                </h4>
-            </ul> <br> <br>
-            <h2>Our doctors Advices</h2> <br>
-            <p> For a better health and good body maintanence,<br>Maintain the diet
-                correctly and consume the prescribed medicines at <br>regular intervals
-                for the prescribed days strictly for better results. <br> Do not take
-                Medicines Without the advice of doctors. <br> If there is any
-                complications/difficulties report to the doctor immediately. <br>It would
-                become serious Condition if left carelessly <br>and it may become very
-                difficult for us to solve the problem.</p> <br> <br>
-            <h2>Review</h2>
-            <form action="#">
-                <label for="">Name :</label>
-                <input type="text" placeholder="Your name"><br> <br> <br>
-                <label for="">Review :</label>
-                <textarea name="" id="">Welcome</textarea><br> <br> <br>
-                <input type="submit" value="submit" style="margin-left: 15%;">
-            </form>
-        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 " style="background-image: url('{{ url_for('static', filename='images/med2.png') }}'); background-size : cover;">{% block content %} {% endblock %}</div>
+        
         <div class="departement">
             <img src="{{url_for('static', filename='images/med3.jpg') }}" alt="pation" class="profile-photo"> <br> <br>
             <h2>DEPARTMENTS</h2>
@@ -65,10 +37,6 @@
             <a href="guesmihadil0@gmail.com"><i class="fa-solid fa-at"></i>guesmihadil0@gmail.com</a><br> <br>
             <a href="+21655734856"><i class="fa-brands fa-whatsapp"></i>+21655734856</a>
         </div>
-        
-
-        
-
     </section>
 </body>
 </html>

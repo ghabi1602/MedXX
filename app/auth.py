@@ -17,13 +17,13 @@ def login():
         log_user = User.query.filter_by(email=email).first()
         if log_user and check_password_hash(log_user.password, password):
             login_user(log_user)
-            flash('Login sucessful', 'sucess')
+            flash('Login sucessful', 'success')
             if log_user.is_doctor:
-                log_user.is_online = True
+                current_user.is_online = True
                 db.session.commit()
                 return redirect(url_for('routes.dashdoc'))
             else:
-                log_user.is_online = True
+                current_user.is_online = True
                 db.session.commit()
                 return redirect(url_for('routes.dashpat'))
         else:
@@ -92,5 +92,7 @@ def register():
 @bp.route('/logout')
 @login_required
 def logout():
+    current_user.is_online = False
+    db.session.commit()
     logout_user()
     return redirect(url_for('routes.home'))
