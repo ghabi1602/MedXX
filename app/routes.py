@@ -117,3 +117,4 @@ def doc():
 def doc_list():
     doctors = Doctor.query.all()
     return render_template('doc_list.html', doctors=doctors)
+
