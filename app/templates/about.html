@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='images/asmaa.png') }}">
+    <title>MedX</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css')}}">
+    
+</head>
+<body style="background-color: rgb(252, 251, 251);">
+    <header class="header" style="background-color: rgb(129, 216, 187);">
+        <nav class="nav">
+            <img src="{{ url_for('static', filename='images/md.png') }}" alt="logo" height="100%" width="4%">
+            <ul class="nav_items">
+                <li class="nav_item">
+                    <a href="{{url_for('routes.home')}}" class="nav_link">Home</a>
+                    <a href="{{ url_for('routes.about') }}" class="nav_link">About</a>
+                    <a href="{{ url_for('routes.doc')}}" class="nav_link">Doctors</a>
+                    <a href="#" class="nav_link">Review</a>
+                </li>
+            </ul>
+            <a href="{{ url_for('routes.home')}}" class="button">Get Started</button>
+        </nav>
+    </header>
+    
+    <section class="container2">
+        <div class="amine">
+            <h2>We Take Care Of Your <span style="color: rgb(8, 117, 94);">Healthy Life</span></h2><br>
+            <p>With <span style="color: rgb(6, 168, 218);">MedX</span> , <br>Patients Have Access To A Range Of Powerful Features. <br>
+                    They Can Easily Explore Detailed Profiles Of Doctors, Clinics, And Dispensaries, <br>
+                    View Contact Information, Branch Locations, And Even Visualize Them On A Map. <br>
+                    Our Platform Allows Patients To Book Consultations With Specific Doctors, <br>
+                    Effortlessly Managing Appointments And Receiving <br>Real-Time Notifications For Any Updates Or Changes</p>
+        </div>
+        <div >
+            <img src="{{ url_for('static', filename='images/doc3.jpg') }}" alt="" class="img1">
+        </div>
+    </section>
+    <section class="container2">
+        <div >
+            <img src="{{ url_for('static', filename='images/helth7.webp') }}" alt="" class="img1">
+        </div>
+        <div class="amine">
+            <h2></h2><br>
+            <p>In Addition, <span style="color: rgb(6, 168, 218);">MedX</span> <br>Provides A Personalized Health Portal Where Patients Can Access Their Previous Reservations, <br>
+                Prescriptions, And Notes From Doctors. <br>
+                They Can Stay Informed And Engaged With Health Awareness Articles And Videos Curated By Healthcare Professionals.
+        </div>
+        
+    </section>
+    <section class="container2">
+        <div class="amine">
+            <h2></h2><br>
+            <p>With <span style="color: rgb(6, 168, 218);">MedX</span> , <br>
+                Clinic Administrators Have Full Control Over The Platform, <br>
+                With The Ability To Customize The Application's Logo, Information, Colors, Working Hours, <br>
+                And Other Essential Details Without Any Dependency On Us</p>
+        </div>
+        <div >
+            <img src="{{ url_for('static', filename='images/helth.jpg') }}" alt="health" class="img1">
+        </div>
+    </section>
+    <section class="container2">
+        <div >
+            <img src="{{ url_for('static', filename='images/helth6.jpg') }}" alt="health" class="img1">
+        </div>
+        <div class="amine">
+            <h2></h2> <br>
+            <p>Experience The Future Of Healthcare With <span style="color: rgb(6, 168, 218);">MedX</span>. <br>
+                Join Us In Transforming The Way Clinics And Patients Interact, <br>Ensuring An Engaging, Efficient, <br>
+                And Patient-Centered Approach To Healthcare Delivery.</p>
+        </div>
+        
+    </section>
+    <script src="https://kit.fontawesome.com/50aca5c1f9.js" crossorigin="anonymous"></script>
+</body>
+</html>

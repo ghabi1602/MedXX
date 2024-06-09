@@ -6,17 +6,23 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 .amine{
     margin-left: 3%;
     float: left;
-    color: #cbb3da;
-    margin-top: 10%;
+    color: rgb(30, 148, 207);
+    margin-top: 15%;
 }
 .amine h1{
     color: rgb(52, 211, 203);
+    text-align: center;
+}
+.amine h2 {
+    text-align: center
 }
 .amine p{
-    color: #f3f3f3;
+    color: teal;
+    font-weight: bold;
 }
 .header{
     position: fixed;
@@ -46,17 +52,23 @@ a {
 .nav_item {
     column-gap: 25px;
     list-style: none;
-    
-
 }
 .nav_link:hover{
-    color: rgb(233, 233, 85);
+    color: rgb(8, 117, 94);
+}
+#menu-btn{
+    font-size: 2.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: rgb(0, 128, 117);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: none;
 }
 .home{
     position: relative;
     height: 100vh;
     width: 100%;
-    
     background-size: cover;
     background-position: center;
 }
@@ -86,13 +98,15 @@ a {
     border-radius: 6px;
     cursor: pointer;
 }
-.button:hover{
-    background-color: white;
-    color: teal;
-}
 .button:active{
     transform: scale(0.98);
 }
+
+.button:hover{
+    color: rgb(101, 196, 175);
+    background-color: white;
+}
+
 .from_container{
     position: absolute;
     max-width: 320px;
@@ -109,6 +123,7 @@ a {
     pointer-events: none;
     transition: all 0.4s ease-out;
 }
+
 .home.show .from_container{
     opacity: 1;
     pointer-events: auto;
@@ -216,32 +231,43 @@ a {
 }
 .sgn{
     margin: 10%;
-    padding: 7px ;
+    padding: 5px ;
     font-size: x-large;
     text-align: center;
     margin-top: 25%;
     margin-left: 20%;
-    border: 3px solid white;
+    border: 3px none white;
     background: transparent;
     border-radius: 6px;
     cursor: pointer;
     color: aliceblue;
 }
+.sgn:hover{
+    color: rgb(0, 128, 117);
+    background-color: white;
+}
 .img{
-    height: 20%;
-    width: 20%;
+    height: 15rem;
+    width: 15rem;
     margin-top: 20%;
     margin-left: 2%;
     margin-right: 10%;
+    border-radius: 50%;
 }
-
+.img1{
+    height: 50%;
+    width: 60%;
+    margin-top: 20%;
+    border-radius: 30%;
+    display: flex;
+    
+}
 .container{
     padding: 10%;
     size: 40%;
     width: 50%;
     text-align: center;
 }
-
 legend{
     text-decoration: wavy;
     color: rgb(0, 0, 0);
@@ -251,12 +277,10 @@ legend{
     margin: 10% ;
     text-align: left;
 }
-
 .btn{
     width: 100%;
     margin-top: 10%;
 }
-
 .cover{
     background-image: url(images/med2.png);
     background-size: cover;
@@ -264,7 +288,6 @@ legend{
     width: 100%;
     height: 100%;
 }
-
 .container1 {
     display: grid;
     grid-template-columns: 14rem auto 14rem;
@@ -272,44 +295,45 @@ legend{
     width: 96%;
     margin: 0 auto;
 }
-
 .container1 div ul  li {
     list-style: none;
+    /*text-align: center;*/
 }
-
 .container1 h2{
     text-align: center;
     text-decoration: wavy;
 }
 
+.container2 {
+    display: grid;
+    grid-template-columns: 40rem 40rem;
+    gap: 1.8rem;
+    width: 96%;
+    margin: 0 auto;
+}
 .dashboard{
     height: 100vh;
     top: 2rem;
 }
-
 .dashboard a{
     transition: all .1s ease-in;
     color: rgb(28, 28, 122);
     align-items: first baseline;
     height: 3.2rem;
 }
-
 .dashboard a span{
     font-size: 1.8rem;
     transition: all .1s ease-in;
 }
-
 .dashboard li:last-child{
     position: absolute;
     bottom: 1rem;
     width: 20%;
 }
 
-
 .dash ul li {
     margin-top: 10%;
 }
-
 .profile-photo{
     width: 3rem;
     height: 3rem;
@@ -317,14 +341,50 @@ legend{
     overflow: hidden;
     margin-left: 90%;
 }
-
 .departement a i{
     width: 100%;
 }
 
-.display{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    
+#front {
+    color: white;
+}
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 2rem;
+    }
+
+}
+@media(max-width:768px){
+    #menu-btn{
+        display: initial;
+    }
+    .header .nav_item{
+        position: absolute;
+        top: 115%; right: 2rem;
+        border-radius: .5rem;
+        box-shadow: .5rem .5rem 0 rgba(22, 160, 133, .2);
+        width: 30rem;
+        background: #fff;
+        border: 2rem solid rgb(10, 134, 114);
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: top right;
+        transition: none;
+    }
+    .header .nav_item a{
+        font-size: 2rem;
+        display: block;
+        margin: 2.5rem;
+    }
+
+}
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
 }

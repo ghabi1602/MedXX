@@ -13,6 +13,12 @@ def home():
     """route to the landing page"""
     return render_template('index2.html')
 
+#route to about page
+@bp.route('/about', )
+def about():
+    """return the about page"""
+    return render_template('about.html')
+
 
 #function that returns the lsit of active users to respective dashboard
 @bp.route('/dashboard')
