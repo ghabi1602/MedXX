@@ -1,6 +1,6 @@
 # Medx App
 
-![logo](https://github.com/ify-zi/MedX/app/static/images/md.png)
+![logo](https://github.com/ify-zi/MedX/blob/main/app/static/images/md.png)
 
 ## Description
 
