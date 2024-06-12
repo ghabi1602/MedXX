@@ -18,19 +18,19 @@ The Medx App is a web-based application designed to facilitate communication bet
 
 ## Screenshots
 - landing page
-![screenshot1](https://github.com/ify-zi/MedX/screenshots/landing_page.jpg)
+![screenshot1](https://github.com/ify-zi/MedX/blob/main/screenshots/landing_page.jpg)
 
 - patients Dashboard
-![screenshot2](https://github.com/ify-zi/MedX/screenshots/patient_dashboard.jpg)
+![screenshot2](https://github.com/ify-zi/MedX/blob/main/screenshots/patient_dashboard.jpg)
 
 - doctor_dashboard
-![screenshot2](https://github.com/ify-zi/MedX/screenshots/doctor_dashboard.jpg)
+![screenshot2](https://github.com/ify-zi/MedX/blob/main/screenshots/doctor_dashboard.jpg)
 
 - chat interface
 ![screenshot4](https://github.com/ify-zi/MedX/screenshots/chat_interface.jpg)
 
 - doctors_patients_records
-![screenshot5](https://github.com/ify-zi/MedX/screenshots/doctors_records.jpg)
+![screenshot5](https://github.com/ify-zi/MedX/blob/main/screenshots/doctors_records.jpg)
 
 
 ## Technologies Used
