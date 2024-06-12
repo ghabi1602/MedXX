@@ -33,9 +33,9 @@ The Medx App is a web-based application designed to facilitate communication bet
 ![screenshot5](https://github.com/ify-zi/MedX/blob/main/screenshots/doctors_records.jpg)
 
 
-## Demo
+## Demo Video (tap to watch)
 
-[![demo](https://github.com/ify-zi/MedX/blob/main/screenshots/landing_page.jpg)](https://1drv.ms/v/s!Atxmn4zs8omJmA-JTSiI15Ed_LCH?e=8p30GC)
+[![Watch the video](https://github.com/ify-zi/MedX/blob/main/screenshots/landing_page.jpg)](https://1drv.ms/v/s!Atxmn4zs8omJmA-JTSiI15Ed_LCH?e=8p30GC)
 
 
 ## Technologies Used
