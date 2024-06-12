@@ -67,7 +67,7 @@ The Medx App is a web-based application designed to facilitate communication bet
    git clone https://github.com/ify-zi/Medx.git
    cd MedX
 
-2. **Install Requiremnets
+2. **Install Requiremnets**
     ```bash
     pip install -r requirements.txt
 
@@ -82,7 +82,7 @@ The Medx App is a web-based application designed to facilitate communication bet
     ```bash
    python -m run
 
-4. **Use a broswer to naviagte the app
+4. **Use a broswer to naviagte the app**
 
 
 ## Authors
