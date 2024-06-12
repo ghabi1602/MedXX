@@ -1,5 +1,7 @@
 # Medx App
 
+![logo](https://github.com/ify-zi/MedX/app/static/images/md.png)
+
 ## Description
 
 The Medx App is a web-based application designed to facilitate communication between doctors and patients. It features user authentication, real-time chat functionality, and separate interfaces for doctors and patients. The backend is built with the Flask framework, and the frontend is designed with HTML, CSS, and JavaScript. The application also utilizes WebSocket via Flask-SocketIO for real-time messaging.
@@ -13,6 +15,14 @@ The Medx App is a web-based application designed to facilitate communication bet
 - Secure password hashing
 - Database migrations using Flask-Migrate
 - MySQL database support
+
+## Screenshots
+![screenshot1] (https://github.com/ify-zi/MedX/screenshots/landing_page.jpg)
+![screenshot2] (https://github.com/ify-zi/MedX/screenshots/patient_dashboard.jpg)
+![screenshot2] (https://github.com/ify-zi/MedX/screenshots/doctor_dashboard.jpg)
+![screenshot4] (https://github.com/ify-zi/MedX/screenshots/chat_interface.jpg)
+![screenshot5] (https://github.com/ify-zi/MedX/screenshots/doctors_records.jpg)
+
 
 ## Technologies Used
 
@@ -43,7 +53,11 @@ The Medx App is a web-based application designed to facilitate communication bet
    git clone https://github.com/ify-zi/Medx.git
    cd MedX
 
-2. **Initialise database:**
+2. **Install Requiremnets
+    ```bash
+    pip install -r requirements.txt
+
+3. **Initialise database:**
     ```bash
     flask db init
     flask db migrate -m "Initial commit"
@@ -53,3 +67,11 @@ The Medx App is a web-based application designed to facilitate communication bet
 
     ```bash
    python -m run
+
+4. **Use a broswer to naviagte the app
+
+
+## Authors
+- Ifeanyi Zion Chidibere - [Github](https://github.com/ify-zi) / [Twitter](https://twitter.com/ify_zi) / [LinkedIn](https://www.linkedin.com/in/ifeanyi-zion-chidiebere-b078371a4)
+- Asma Guesmi - [Github](https://github.com/Asma22334585) / [Twitter](https://twitter.com/HaDil08527786) / [LinkedIn](https://www.linkedin.com/in/asma-guesmi)
+- Abdessattar Ghabi - [Github](https://github.com/ghabi1602) / [Twitter](https://twitter.com/GhabiAm1602) / [LinkedIn](https://www.linkedin.com/in/abdessattar-ghabi-412a30285)
